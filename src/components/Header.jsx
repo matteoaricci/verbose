@@ -8,7 +8,6 @@ import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 const Header = () => {
   return (
     <HeaderContainer>
-      {/* Header Left */}
       <HeaderLeft>
         <HeaderAvatar
         // TODO: Add onClick
@@ -16,13 +15,11 @@ const Header = () => {
         <AccessTimeIcon />
       </HeaderLeft>
 
-      {/* Header Search */}
       <HeaderSearch>
         <SearchIcon />
         <input type="text" placeholder="Search" />
       </HeaderSearch>
 
-      {/* Header Right */}
       <HeaderRight>
         <HelpOutlineIcon />
       </HeaderRight>

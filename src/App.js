@@ -1,18 +1,27 @@
 import React from "react";
 import "./App.css";
-import Header from './components/Header'
+import Header from "./components/Header";
+import Sidebar from './components/Sidebar';
 import { Switch, Route } from "react-router-dom";
+import styled from 'styled-components'
 
 function App() {
   return (
     <>
-      <Switch>
-        <Route exact path='/'>
-          <Header />
-        </Route>
-      </Switch>
+      <Header />
+      <AppBody>
+        <Sidebar />
+        <Switch>
+          <Route exact path="/"></Route>
+          {/* Chat */}
+        </Switch>
+      </AppBody>
     </>
   );
 }
 
 export default App;
+
+const AppBody = styled.div`
+
+`;
