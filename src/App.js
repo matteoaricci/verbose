@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import Header from "./components/Header";
-import Sidebar from './components/Sidebar';
+import Sidebar from "./components/Sidebar";
 import { Switch, Route } from "react-router-dom";
-import styled from 'styled-components'
+import styled from "styled-components";
 
 function App() {
   return (
@@ -23,5 +23,6 @@ function App() {
 export default App;
 
 const AppBody = styled.div`
-
+  display: flex;
+  height: 100vh;
 `;
