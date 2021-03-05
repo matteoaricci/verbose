@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { enterRoom } from "../features/appSlice";
 import styled from "styled-components";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
@@ -14,6 +16,8 @@ import { db } from "../firebase";
 const SidebarOption = ({ Icon, title, addChannelOption, id }) => {
   const [open, setOpen] = useState(false);
   const [channelName, setChannelName] = useState("");
+  const dispatch = useDispatch();
+
   const handleClose = () => {
     setOpen(false);
     setChannelName("");
@@ -29,7 +33,11 @@ const SidebarOption = ({ Icon, title, addChannelOption, id }) => {
     handleClose();
   };
 
-  const selectChannel = () => {};
+  const selectChannel = () => {
+    if (id) {
+      dispatch(enterRoom({ roomId: id }));
+    }
+  };
   return (
     <>
       <SidebarOptionContainer
